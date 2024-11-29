@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<style>
+    body{background-image: url('https://img.freepik.com/premium-photo/blur-hospital-background-with-medical-equipments-modern-room-generative-ai_874904-45656.jpg ');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:100% 100%;
+    background-color: rgb(34, 34, 34);
+    opacity: 0.85;}
+    /* filter: opacity(0.5);} */
+
+</style>
+<form action="{{ url_for('edit_patient', id=patient['id'] if patient is mapping else patient[0]) }}" method="POST">
+    <label for="name">Patient Name:</label><br>
+    <input type="text" name="name" value="{{ patient['1'] }}" required><br>
+    <br>
+    <label for="age">Age:</label><br>
+    <input type="number" name="age" value="{{ patient['2'] }}" required><br>
+    <br>
+    <label for="gender">Gender:</label><br>
+    <select  name="gender" required>
+        <option value="Male" {% if patient["gender"] == 'Male' %}selected{% endif %}>Male</option>
+        <option value="Female" {% if patient['gender'] == 'Female' %}selected{% endif %}>Female</option>
+        <option value="Other" {% if patient['gender'] == 'Other' %}selected{% endif %}>Other</option>
+    </select><br>
+    <br>
+    <label for="contact">Contact:</label><br>
+    <input type="text" name="contact" value="{{ patient['4'] }}" required><br>
+    <br>
+    <label for="mail">mail:</label><br>
+    <input type="text" name="mail" value="{{ patient['5'] }}" required><br>
+    <br>
+    <button type="submit" class="btn btn-dark">Update Patient</button>
+</form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="{{ url_for('add_patient') }}" method="POST">
+    <label for="name">Patient Name:</label>
+    <input type="text" id="name" name="name" required><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+    </select><br>
+
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact" required><br>
+
+    <button type="submit">Add Patient</button>
+</form>
+{% endblock %}

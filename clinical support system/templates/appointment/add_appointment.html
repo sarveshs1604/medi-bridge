@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Add New Appointment</h2>
+<form action="{{ url_for('add_appointment') }}"method="POST">
+    <label for="patient_id">Patient id:</label>
+    <input type="number" id="patient_id" name="patient_id" required><br><br>
+
+    <label for="doctor_id">Doctor ID:</label>
+    <input type="number" id="doctor_id" name="doctor_id" required><br><br>
+
+    <label for="date">Appointment Date:</label>
+    <input type="date" id="date" name="date" required><br><br>
+
+    <label for="time">Appointment Time:</label>
+    <input type="time" id="time" name="time" required><br><br>
+
+    <button type="submit">Add Appointment</button>
+</form>
+{% endblock %}
+

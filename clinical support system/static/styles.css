@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.hero-btn{
+    display: inline-block;
+    margin:auto;
+    text-decoration: solid;
+    color: red;
+    border: 1px solid black;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    left: 45%
+}
+
+.hero-btn:hover{
+    border:1px solid black;
+    background: black;
+    transition: 1s;
+    align-self: center;
+
+}    
+.text-muted {
+    color: violet;           /* Set to a vivid violet color */
+    opacity: 1;              /* Ensure full visibility */
+    font-weight: bold;       /* Optional: Makes it more prominent */
+    cursor: not-allowed;
+}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Add New Doctor</h2>
+<form action="{{ url_for('add_doctor') }}" method="post">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Doctor's Name" required>
+    </div>
+    <div>
+        <label for="specialty">Specialty:</label>
+        <input type="text" id="specialty" name="specialty" placeholder="Specialty" required>
+    </div>
+    <div>
+        <label for="contact">Contact:</label>
+        <input type="text" id="contact" name="contact" placeholder="Contact Number" required>
+    </div>
+    <div>
+        <button type="submit">Add Doctor</button>
+    </div>
+</form>
+{% endblock %}
